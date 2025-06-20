@@ -1,0 +1,4132 @@
+/* Enhanced Dashboard Styles - Add these to your existing CSS */
+
+/* Dashboard Title */
+.dashboard-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #00a8ff;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 30px 0;
+    -fx-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.3), 8, 0.3, 0, 2);
+}
+
+/* Statistics Cards */
+.stat-card {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.3, 0, 4);
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.stat-card:hover {
+    -fx-background-color: #3d566e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 15, 0.4, 0, 6);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.stat-icon {
+    -fx-font-size: 32px;
+    -fx-text-fill: #00a8ff;
+    -fx-font-weight: bold;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.stat-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+}
+
+/* Specific card colors */
+.rooms-card .stat-icon {
+    -fx-text-fill: #3498db;
+}
+
+.available-card .stat-icon {
+    -fx-text-fill: #2ecc71;
+}
+
+.reservations-card .stat-icon {
+    -fx-text-fill: #9b59b6;
+}
+
+.active-card .stat-icon {
+    -fx-text-fill: #e74c3c;
+}
+
+.occupancy-card .stat-icon {
+    -fx-text-fill: #f39c12;
+}
+
+/* Chart Section */
+.chart-section {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 12, 0.3, 0, 4);
+}
+
+.chart-section-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 15px 0;
+    -fx-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/* Enhanced Pie Chart */
+.dashboard-pie-chart {
+    -fx-background-color: transparent;
+    -fx-padding: 15px;
+}
+
+.dashboard-pie-chart .chart-title {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dashboard-pie-chart .chart-legend {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 13px;
+    -fx-background-color: transparent;
+}
+
+.dashboard-pie-chart .chart-legend-item {
+    -fx-text-fill: #ecf0f1;
+}
+
+.dashboard-pie-chart .chart-pie-label {
+    -fx-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.dashboard-pie-chart .chart-pie-label-line {
+    -fx-stroke: #ecf0f1;
+    -fx-stroke-width: 1.5px;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    -fx-progress-color: #00a8ff;
+    -fx-padding: 20px;
+}
+
+.loading-indicator .percentage {
+    -fx-fill: #00a8ff;
+}
+
+/* Error State */
+.error-container {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.3, 0, 4);
+}
+
+.error-icon {
+    -fx-font-size: 48px;
+    -fx-text-fill: #e74c3c;
+}
+
+.error-message {
+    -fx-font-size: 18px;
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+}
+
+.error-detail {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+}
+
+/* Enhanced Content Area */
+.content-area {
+    -fx-spacing: 25px;
+    -fx-padding: 30px;
+    -fx-background-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .stat-card {
+        -fx-min-width: 150px;
+        -fx-max-width: 170px;
+    }
+
+    .stat-value {
+        -fx-font-size: 20px;
+    }
+
+    .stat-icon {
+        -fx-font-size: 28px;
+    }
+}
+
+/* Animation classes for smooth transitions */
+.stat-card {
+    -fx-transition: all 0.3s ease;
+}
+
+/* Improved overall layout spacing */
+.hbox {
+    -fx-spacing: 15px;
+}
+
+/* Enhanced card hover effects */
+.stat-card:hover .stat-value {
+    -fx-text-fill: #00a8ff;
+}
+
+.stat-card:hover .stat-title {
+    -fx-text-fill: white;
+}
+
+/* Enhanced Main UI Styles - Add these to your existing CSS */
+
+/* Main Container */
+.main-container {
+    -fx-background-color: #1e272e;
+}
+
+/* Enhanced Top Bar */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, #2c3e50, #34495e);
+    -fx-padding: 12px 20px;
+    -fx-alignment: center-left;
+    -fx-spacing: 20px;
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 2);
+}
+
+/* Logo Section */
+.logo-image {
+    -fx-fit-height: 50;
+    -fx-preserve-ratio: true;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0.3, 0, 2);
+}
+
+.logo-fallback {
+    -fx-font-size: 32px;
+    -fx-text-fill: #00a8ff;
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.4), 5, 0.3, 0, 2);
+}
+
+.app-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.3, 0, 1);
+}
+
+/* User Info Section */
+.welcome-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+}
+
+.username-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #00a8ff;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.role-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-weight: bold;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 10px;
+    -fx-padding: 2px 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+/* Action Buttons */
+.action-button {
+    -fx-font-size: 16px;
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 8px 12px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.action-button:hover {
+    -fx-background-color: #3d566e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.4, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #2ecc71;
+    -fx-border-color: #27ae60;
+}
+
+.settings-button:hover {
+    -fx-background-color: #f39c12;
+    -fx-border-color: #e67e22;
+}
+
+/* Enhanced Logout Button */
+.logout-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-color: #c0392b;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 6, 0.4, 0, 3);
+}
+
+.logout-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-border-color: #a93226;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.6), 8, 0.5, 0, 4);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Enhanced Tab Pane */
+.main-tab-pane {
+    -fx-background-color: transparent;
+}
+
+.main-tab-pane .tab-header-area {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1f2a38);
+    -fx-padding: 8px 15px 0px 15px;
+    -fx-border-color: #0f1115;
+    -fx-border-width: 0 0 2px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 2);
+}
+
+.main-tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 12px 20px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.main-tab-pane .tab:hover {
+    -fx-background-color: rgba(52, 73, 94, 0.7);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+}
+
+.main-tab-pane .tab:selected {
+    -fx-background-color: #00a8ff;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.4), 8, 0.4, 0, 3);
+}
+
+.main-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Specific Tab Colors */
+.dashboard-tab:selected {
+    -fx-background-color: #3498db;
+}
+
+.rooms-tab:selected {
+    -fx-background-color: #9b59b6;
+}
+
+.search-tab:selected {
+    -fx-background-color: #2ecc71;
+}
+
+.reservations-tab:selected {
+    -fx-background-color: #e67e22;
+}
+
+/* Tab Content Area */
+.main-tab-pane .tab-content-area {
+    -fx-background-color: #1e272e;
+    -fx-padding: 0;
+}
+
+/* Tab Loading */
+.tab-loading-container {
+    -fx-background-color: #1e272e;
+    -fx-padding: 50px;
+}
+
+.tab-loading {
+    -fx-progress-color: #00a8ff;
+}
+
+/* Status Bar */
+.status-bar {
+    -fx-background-color: linear-gradient(to right, #1f2a38, #2c3e50);
+    -fx-padding: 8px 20px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px 0 0 0;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, -2);
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+}
+
+.connection-status {
+    -fx-font-size: 12px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+}
+
+.time-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 4px;
+    -fx-padding: 2px 6px;
+}
+
+/* Alert Dialogs */
+.alert-dialog {
+    -fx-background-color: #2c3e50;
+}
+
+.alert-dialog .header-panel {
+    -fx-background-color: #34495e;
+}
+
+.alert-dialog .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.alert-dialog .content {
+    -fx-background-color: #2c3e50;
+}
+
+.alert-dialog .content .label {
+    -fx-text-fill: #ecf0f1;
+}
+
+/* Tooltips */
+.tooltip {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-size: 11px;
+    -fx-padding: 4px 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.3, 0, 3);
+}
+
+/* Smooth Transitions */
+.action-button,
+.logout-button,
+.main-tab-pane .tab {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .app-title {
+        -fx-font-size: 16px;
+    }
+
+    .username-label {
+        -fx-font-size: 14px;
+    }
+
+    .main-tab-pane .tab {
+        -fx-padding: 10px 15px;
+        -fx-font-size: 13px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-transition: opacity 0.3s ease;
+}
+
+.fade-in:hover {
+    -fx-opacity: 1;
+}
+
+/* Enhanced Content Areas */
+.content-area {
+    -fx-background-color: #1e272e;
+    -fx-padding: 25px;
+}
+/* Room Management Enhanced Styles - Add these to your existing CSS */
+
+/* Main Title */
+.room-management-title {
+    -fx-font-size: 26px;
+    -fx-text-fill: #9b59b6;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.3), 6, 0.3, 0, 2);
+}
+
+.room-count-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 15px;
+    -fx-padding: 5px 12px;
+    -fx-font-weight: bold;
+}
+
+/* Search Section */
+.search-section {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.subsection-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.search-field {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+}
+
+.search-field:focused {
+    -fx-border-color: #9b59b6;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.4), 6, 0.3, 0, 2);
+}
+
+.filter-combo {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.filter-combo .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.filter-combo .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2f3640;
+}
+
+/* Statistics Cards */
+.stat-card {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+    -fx-cursor: hand;
+}
+
+.stat-card:hover {
+    -fx-background-color: #3d566e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.4, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.total-rooms-stat .stat-icon {
+    -fx-text-fill: #3498db;
+}
+
+.available-rooms-stat .stat-icon {
+    -fx-text-fill: #2ecc71;
+}
+
+.occupied-rooms-stat .stat-icon {
+    -fx-text-fill: #e74c3c;
+}
+
+.revenue-stat .stat-icon {
+    -fx-text-fill: #f39c12;
+}
+
+/* Enhanced Table Styling */
+.room-table {
+    -fx-background-color: #2f3640;
+    -fx-text-background-color: white;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.room-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.room-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.room-table .table-row-cell {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.room-table .table-row-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.room-table .table-row-cell:filled:selected {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+}
+
+/* Row Status Colors */
+.available-row {
+    -fx-border-color: #2ecc71;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.occupied-row {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 0 0 0 4px;
+}
+
+/* ID Column Styling */
+.id-column .table-cell {
+    -fx-text-fill: #95a5a6;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 12px;
+    -fx-alignment: CENTER;
+}
+
+/* Status Labels */
+.status-available {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.status-occupied {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Action Buttons */
+.primary-button {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.4), 6, 0.3, 0, 3);
+}
+
+.primary-button:hover {
+    -fx-background-color: #8e44ad;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.6), 8, 0.4, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.secondary-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 16px;
+    -fx-font-size: 14px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.secondary-button:hover {
+    -fx-background-color: #3d566e;
+    -fx-border-color: #95a5a6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.4, 0, 3);
+}
+
+.danger-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 16px;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 6, 0.3, 0, 3);
+}
+
+.danger-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.6), 8, 0.4, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Mini Buttons for Table Actions */
+.mini-button {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-padding: 4px 8px;
+    -fx-font-size: 12px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+
+.mini-button:hover {
+    -fx-background-color: #3d566e;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.mini-button.edit-button:hover {
+    -fx-background-color: #f39c12;
+    -fx-border-color: #e67e22;
+}
+
+.mini-button.delete-button:hover {
+    -fx-background-color: #e74c3c;
+    -fx-border-color: #c0392b;
+}
+
+/* Status Section */
+.status-section {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 8px;
+    -fx-padding: 8px 15px;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    -fx-progress-color: #9b59b6;
+}
+
+.loading-indicator .percentage {
+    -fx-fill: #9b59b6;
+}
+
+/* Enhanced Button Specific Styles */
+.create-button {
+    -fx-background-color: #2ecc71;
+    -fx-font-size: 15px;
+    -fx-padding: 12px 24px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.5), 8, 0.4, 0, 4);
+}
+
+.create-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.7), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.edit-button {
+    -fx-background-color: #f39c12;
+}
+
+.edit-button:hover {
+    -fx-background-color: #e67e22;
+}
+
+.delete-button {
+    -fx-background-color: #e74c3c;
+}
+
+.delete-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.bulk-delete-button {
+    -fx-background-color: #8e44ad;
+}
+
+.bulk-delete-button:hover {
+    -fx-background-color: #732d91;
+}
+
+.export-button {
+    -fx-background-color: #16a085;
+}
+
+.export-button:hover {
+    -fx-background-color: #138d75;
+}
+
+/* Dialog Styling */
+.alert-dialog .dialog-pane {
+    -fx-background-color: #2c3e50;
+}
+
+.alert-dialog .dialog-pane .header-panel {
+    -fx-background-color: #34495e;
+    -fx-padding: 15px;
+}
+
+.alert-dialog .dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.alert-dialog .dialog-pane .content {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20px;
+}
+
+.alert-dialog .dialog-pane .content .label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.alert-dialog .dialog-pane .content .text-field {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 8px;
+}
+
+.alert-dialog .dialog-pane .content .text-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 6, 0.3, 0, 2);
+}
+
+.alert-dialog .dialog-pane .content .combo-box {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+
+.alert-dialog .dialog-pane .content .combo-box .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 6px 6px 0;
+}
+
+.alert-dialog .dialog-pane .content .combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2f3640;
+}
+
+.alert-dialog .dialog-pane .content .check-box {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.alert-dialog .dialog-pane .content .check-box .box {
+    -fx-background-color: #34495e;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 3px;
+}
+
+.alert-dialog .dialog-pane .content .check-box:selected .mark {
+    -fx-background-color: #2ecc71;
+}
+
+.alert-dialog .dialog-pane .button-bar .button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+}
+
+.alert-dialog .dialog-pane .button-bar .button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Enhanced Transitions */
+.stat-card,
+.primary-button,
+.secondary-button,
+.danger-button,
+.mini-button {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .stat-card {
+        -fx-pref-width: 120px;
+        -fx-padding: 12px;
+    }
+
+    .stat-value {
+        -fx-font-size: 18px;
+    }
+
+    .stat-icon {
+        -fx-font-size: 24px;
+    }
+
+    .room-table {
+        -fx-font-size: 12px;
+    }
+}
+
+/* Custom Scrollbar for Table */
+.room-table .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 12px;
+}
+
+.room-table .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 6px;
+}
+
+.room-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #7f8c8d;
+    -fx-background-radius: 6px;
+}
+
+.room-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #95a5a6;
+}
+
+/* Room Management ScrollPane */
+.room-management-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.room-management-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.room-management-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.room-management-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.room-management-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #9b59b6;
+    -fx-background-radius: 7px;
+}
+
+.room-management-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #8e44ad;
+}
+
+.room-management-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #732d91;
+}
+
+.room-management-scroll .scroll-bar:vertical .increment-button,
+.room-management-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.room-management-scroll .scroll-bar:vertical .increment-button:hover,
+.room-management-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Search Section Enhancements */
+.search-field .text {
+    -fx-fill: white;
+}
+
+.search-field:focused .text {
+    -fx-fill: white;
+}
+
+/* Filter Combo Enhancements */
+.filter-combo .list-view {
+    -fx-background-color: #2f3640;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+}
+
+.filter-combo .list-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.filter-combo .list-cell:selected {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+}
+
+/* Table Selection Enhancement */
+.room-table:focused .table-row-cell:filled:selected {
+    -fx-background-color: #9b59b6;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.4), 6, 0.3, 0, 2);
+}
+
+/* Animation Classes */
+.fade-in-table {
+    -fx-opacity: 0;
+}
+
+
+
+
+/* Enhanced Booking Scene Styles - Add these to your existing CSS */
+
+/* Booking Title */
+.booking-title {
+    -fx-font-size: 30px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.3), 8, 0.3, 0, 2);
+}
+
+.booking-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* Control Labels */
+.control-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/* Search Controls */
+.search-combo {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 10px;
+}
+
+.search-combo:focused {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.search-combo .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.search-combo .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2f3640;
+}
+
+.search-date-picker {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.search-date-picker:focused {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.search-date-picker .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+/* Price Spinners */
+.price-spinner {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.price-spinner:focused {
+    -fx-border-color: #f39c12;
+    -fx-effect: dropshadow(gaussian, rgba(243,156,18,0.4), 6, 0.3, 0, 2);
+}
+
+.price-spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px 0 0 8px;
+}
+
+.price-spinner .increment-arrow-button,
+.price-spinner .decrement-arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.to-label {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-font-size: 12px;
+}
+
+/* Stay Info Box */
+.stay-info-box {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 10px;
+    -fx-padding: 12px;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+}
+
+.stay-duration-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+}
+
+.total-cost-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+}
+
+/* Enhanced Search Buttons */
+.search-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 24px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 4);
+}
+
+.search-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.6), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.clear-button {
+    -fx-background-color: #95a5a6;
+}
+
+.clear-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+.refresh-button {
+    -fx-background-color: #3498db;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Booking Table */
+.booking-table {
+    -fx-background-color: #2f3640;
+    -fx-text-background-color: white;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.booking-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.booking-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.booking-table .table-row-cell {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.booking-table .table-row-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.booking-table .table-row-cell:filled:selected {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+/* Room Row Status */
+.available-room-row {
+    -fx-border-color: #2ecc71;
+    -fx-border-width: 0 0 0 4px;
+}
+
+.occupied-room-row {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 0 0 0 4px;
+}
+
+/* Room Number Column */
+.room-number-column .table-cell {
+    -fx-text-fill: #3498db;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Enhanced Status Labels */
+.status-available {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.status-occupied {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Book Button */
+.book-selected-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 30px;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 4);
+}
+
+.book-selected-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.6), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.book-selected-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Mini Book Button in Table */
+.mini-button.book-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 4px 8px;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.mini-button.book-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.mini-button.book-button:disabled {
+    -fx-background-color: #95a5a6;
+    -fx-cursor: default;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Help Button */
+.help-button {
+    -fx-background-color: #9b59b6;
+}
+
+.help-button:hover {
+    -fx-background-color: #8e44ad;
+}
+
+/* Enhanced Search Section */
+.search-section {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.4, 0, 4);
+    -fx-border-color: #1f2a38;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+}
+
+/* Responsive Design for Booking */
+@media (max-width: 1200px) {
+    .booking-title {
+        -fx-font-size: 26px;
+    }
+
+    .search-combo,
+    .search-date-picker {
+        -fx-pref-width: 130px;
+    }
+
+    .price-spinner {
+        -fx-pref-width: 80px;
+    }
+
+    .booking-table {
+        -fx-font-size: 12px;
+    }
+}
+
+/* Smooth Transitions */
+.search-button,
+.book-selected-button,
+.mini-button.book-button,
+.search-combo,
+.search-date-picker,
+.price-spinner {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Enhanced Focus Effects */
+.search-combo:focused,
+.search-date-picker:focused,
+.price-spinner:focused {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Category Icons in Cells */
+.booking-table .table-cell {
+    -fx-padding: 6px 8px;
+}
+
+/* Loading and Status */
+.booking-table .loading-indicator {
+    -fx-progress-color: #2ecc71;
+}
+
+/* Custom Scrollbar for Booking Table */
+.booking-table .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 12px;
+}
+
+.booking-table .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 6px;
+}
+
+.booking-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 6px;
+}
+
+.booking-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #27ae60;
+}
+
+
+/* Additional ScrollPane Styles - Add these to your existing CSS */
+
+/* Booking ScrollPane */
+.booking-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.booking-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.booking-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.booking-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #27ae60;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #1e8449;
+}
+
+.booking-scroll .scroll-bar:vertical .increment-button,
+.booking-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .increment-button:hover,
+.booking-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Reservations ScrollPane */
+.reservations-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.reservations-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.reservations-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.reservations-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #e67e22;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #d35400;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #a04000;
+}
+
+.reservations-scroll .scroll-bar:vertical .increment-button,
+.reservations-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .increment-button:hover,
+.reservations-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Reservations Specific Styles */
+.reservations-title {
+    -fx-font-size: 26px;
+    -fx-text-fill: #e67e22;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(230,126,34,0.3), 6, 0.3, 0, 2);
+}
+
+.reservations-table {
+    -fx-background-color: #2f3640;
+    -fx-text-background-color: white;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.reservations-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #e67e22, #d35400);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.reservations-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.reservations-table .table-row-cell {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.reservations-table .table-row-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.reservations-table .table-row-cell:filled:selected {
+    -fx-background-color: #e67e22;
+    -fx-text-fill: white;
+}
+
+/* Payment Status Labels */
+.payment-paid {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.payment-pending {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-background-radius: 15px;
+    -fx-padding: 4px 10px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* Room Details Dialog */
+.room-details-dialog {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+}
+
+.dialog-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+.room-form {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+}
+
+.form-label {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.form-value {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 13px;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+}
+
+.form-field {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-padding: 6px 8px;
+}
+
+.form-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 6, 0.3, 0, 2);
+}
+
+.form-combo {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+
+.form-combo .arrow-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 0 6px 6px 0;
+}
+
+.form-checkbox {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.form-checkbox .box {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 3px;
+}
+
+.form-checkbox:selected .mark {
+    -fx-background-color: #2ecc71;
+}
+
+/* Enhanced Button Styles for Reservations */
+.load-button {
+    -fx-background-color: #3498db;
+}
+
+.load-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.cancel-button {
+    -fx-background-color: #e74c3c;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.view-button {
+    -fx-background-color: #16a085;
+}
+
+.view-button:hover {
+    -fx-background-color: #138d75;
+}
+
+.payment-button {
+    -fx-background-color: #f39c12;
+}
+
+.payment-button:hover {
+    -fx-background-color: #e67e22;
+}
+
+.save-button {
+    -fx-background-color: #2ecc71;
+}
+
+.save-button:hover {
+    -fx-background-color: #27ae60;
+}
+
+.cancel-dialog-button {
+    -fx-background-color: #95a5a6;
+}
+
+.cancel-dialog-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* Custom Scrollbar for Reservations Table */
+.reservations-table .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 12px;
+}
+
+.reservations-table .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 6px;
+}
+
+.reservations-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #e67e22;
+    -fx-background-radius: 6px;
+}
+
+.reservations-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #d35400;
+}
+
+/* Smooth scrolling transitions */
+.room-management-scroll,
+.booking-scroll,
+.reservations-scroll {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Focus effects for scrollpanes */
+.room-management-scroll:focused,
+.booking-scroll:focused,
+.reservations-scroll:focused {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+}
+
+
+/* Room Creation Dialog Styles - Add these to your existing CSS */
+
+/* Dialog Container */
+.dialog-container {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.4, 0, 5);
+}
+
+/* Dialog Header */
+.dialog-header {
+    -fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50);
+    -fx-background-radius: 15px 15px 0 0;
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.dialog-title {
+    -fx-font-size: 22px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.3, 0, 1);
+}
+
+.dialog-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Dialog Form */
+.dialog-form {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 0 0 15px 15px;
+}
+
+/* Field Groups */
+.field-group {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+}
+
+.field-title {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.field-description {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
+}
+
+/* Form Controls */
+.dialog-field {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 10px 12px;
+    -fx-pref-height: 40px;
+}
+
+.dialog-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-combo {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-pref-height: 40px;
+}
+
+.dialog-combo:focused {
+    -fx-border-color: #9b59b6;
+    -fx-effect: dropshadow(gaussian, rgba(155,89,182,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-combo .arrow-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.dialog-combo .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2f3640;
+}
+
+.dialog-combo .list-view {
+    -fx-background-color: #2f3640;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.dialog-combo .list-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.dialog-combo .list-cell:selected {
+    -fx-background-color: #9b59b6;
+    -fx-text-fill: white;
+}
+
+/* Currency Label */
+.currency-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 5px;
+}
+
+/* Spinner */
+.dialog-spinner {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+}
+
+.dialog-spinner:focused {
+    -fx-border-color: #f39c12;
+    -fx-effect: dropshadow(gaussian, rgba(243,156,18,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px 0 0 8px;
+    -fx-padding: 8px 10px;
+}
+
+.dialog-spinner .increment-arrow-button,
+.dialog-spinner .decrement-arrow-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 0 8px 8px 0;
+    -fx-border-color: #7f8c8d;
+}
+
+.dialog-spinner .increment-arrow-button:hover,
+.dialog-spinner .decrement-arrow-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Checkbox */
+.dialog-checkbox {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 0;
+}
+
+.dialog-checkbox .box {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 4px;
+    -fx-border-width: 2px;
+    -fx-pref-width: 18px;
+    -fx-pref-height: 18px;
+}
+
+.dialog-checkbox:selected .box {
+    -fx-background-color: #2ecc71;
+    -fx-border-color: #27ae60;
+}
+
+.dialog-checkbox:selected .mark {
+    -fx-background-color: white;
+    -fx-shape: "M2,6 L6,10 L10,2";
+}
+
+/* TextArea */
+.dialog-textarea {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 8px 10px;
+}
+
+.dialog-textarea:focused {
+    -fx-border-color: #16a085;
+    -fx-effect: dropshadow(gaussian, rgba(22,160,133,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-textarea .content {
+    -fx-background-color: transparent;
+}
+
+.dialog-textarea .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.dialog-textarea .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Dialog Buttons */
+.dialog-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 3);
+}
+
+.save-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+.save-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.5), 8, 0.4, 0, 4);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.save-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+.cancel-button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #7f8c8d;
+    -fx-effect: dropshadow(gaussian, rgba(149,165,166,0.5), 8, 0.4, 0, 4);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.cancel-button:disabled {
+    -fx-background-color: #bdc3c7;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+/* Progress Indicator */
+.dialog-progress {
+    -fx-progress-color: #3498db;
+}
+
+.dialog-progress .percentage {
+    -fx-fill: #3498db;
+}
+
+/* Transitions */
+.dialog-button,
+.dialog-field,
+.dialog-combo,
+.dialog-spinner {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Hover Effects */
+.field-group:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.4, 0, 3);
+}
+
+/* Focus Ring for Accessibility */
+.dialog-field:focused,
+.dialog-combo:focused,
+.dialog-spinner:focused {
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}
+
+/* Error States */
+.dialog-field.error {
+    -fx-border-color: #e74c3c;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-combo.error {
+    -fx-border-color: #e74c3c;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 8, 0.4, 0, 2);
+}
+
+/* Success States */
+.dialog-field.success {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 2);
+}
+
+.dialog-combo.success {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 2);
+}
+
+
+
+
+/* User Dashboard Styles - Add these to your existing CSS */
+
+/* User Main Container */
+.user-main-container {
+    -fx-background-color: #1e272e;
+}
+
+/* User Top Bar */
+.user-top-bar {
+    -fx-background-color: linear-gradient(to right, #2c3e50, #34495e);
+    -fx-padding: 15px 25px;
+    -fx-alignment: center-left;
+    -fx-spacing: 20px;
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 2);
+}
+
+/* User Logo Section */
+.user-logo-image {
+    -fx-fit-height: 45;
+    -fx-preserve-ratio: true;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 5, 0.3, 0, 2);
+}
+
+.user-logo-fallback {
+    -fx-font-size: 28px;
+    -fx-text-fill: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 5, 0.3, 0, 2);
+}
+
+.user-app-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.3, 0, 1);
+}
+
+/* User Welcome Section */
+.user-greeting-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+}
+
+.user-username-label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.user-role-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-weight: bold;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 10px;
+    -fx-padding: 2px 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+/* User Action Buttons */
+.user-action-button {
+    -fx-font-size: 16px;
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 8px 12px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.user-action-button:hover {
+    -fx-background-color: #3d566e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.4, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.help-button:hover {
+    -fx-background-color: #3498db;
+    -fx-border-color: #2980b9;
+}
+
+.profile-button:hover {
+    -fx-background-color: #9b59b6;
+    -fx-border-color: #8e44ad;
+}
+
+/* User Logout Button */
+.user-logout-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-border-color: #c0392b;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 6, 0.4, 0, 3);
+}
+
+.user-logout-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-border-color: #a93226;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.6), 8, 0.5, 0, 4);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* User Tab Pane */
+.user-tab-pane {
+    -fx-background-color: transparent;
+}
+
+.user-tab-pane .tab-header-area {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #1f2a38);
+    -fx-padding: 8px 15px 0px 15px;
+    -fx-border-color: #0f1115;
+    -fx-border-width: 0 0 2px 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 2);
+}
+
+.user-tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 12px 20px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-background-radius: 8px 8px 0 0;
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+
+.user-tab-pane .tab:hover {
+    -fx-background-color: rgba(52, 73, 94, 0.7);
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+}
+
+.user-tab-pane .tab:selected {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 3);
+}
+
+.user-tab-pane .tab:selected .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Specific User Tab Colors */
+.user-search-tab:selected {
+    -fx-background-color: #2ecc71;
+}
+
+.user-reservations-tab:selected {
+    -fx-background-color: #3498db;
+}
+
+/* User Tab Content Area */
+.user-tab-pane .tab-content-area {
+    -fx-background-color: #1e272e;
+    -fx-padding: 0;
+}
+
+/* User Status Bar */
+.user-status-bar {
+    -fx-background-color: linear-gradient(to right, #1f2a38, #2c3e50);
+    -fx-padding: 8px 25px;
+    -fx-border-color: #34495e;
+    -fx-border-width: 1px 0 0 0;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, -2);
+}
+
+.user-status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+}
+
+.user-connection-status {
+    -fx-font-size: 12px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+}
+
+.user-time-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 4px;
+    -fx-padding: 2px 6px;
+}
+
+/* Error Container for User Dashboard */
+.error-container {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-padding: 40px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.3, 0, 4);
+}
+
+.error-icon {
+    -fx-font-size: 48px;
+    -fx-text-fill: #e74c3c;
+}
+
+.error-message {
+    -fx-font-size: 18px;
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+}
+
+.error-detail {
+    -fx-font-size: 14px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+}
+
+/* User Alert Dialogs */
+.alert-dialog {
+    -fx-background-color: #2c3e50;
+}
+
+.alert-dialog .header-panel {
+    -fx-background-color: #34495e;
+}
+
+.alert-dialog .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.alert-dialog .content {
+    -fx-background-color: #2c3e50;
+}
+
+.alert-dialog .content .label {
+    -fx-text-fill: #ecf0f1;
+}
+
+/* User Tooltips */
+.tooltip {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-size: 11px;
+    -fx-padding: 4px 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.3, 0, 3);
+}
+
+/* Smooth Transitions for User Dashboard */
+.user-action-button,
+.user-logout-button,
+.user-tab-pane .tab {
+    -fx-transition: all 0.2s ease;
+}
+
+/* User Responsive Design */
+@media (max-width: 1000px) {
+    .user-app-title {
+        -fx-font-size: 16px;
+    }
+
+    .user-username-label {
+        -fx-font-size: 14px;
+    }
+
+    .user-tab-pane .tab {
+        -fx-padding: 10px 15px;
+        -fx-font-size: 13px;
+    }
+}
+
+/* User Animation Classes */
+.fade-in {
+    -fx-opacity: 0;
+    -fx-transition: opacity 0.3s ease;
+}
+
+.fade-in:hover {
+    -fx-opacity: 1;
+}
+
+/* User Content Areas */
+.user-content-area {
+    -fx-background-color: #1e272e;
+    -fx-padding: 25px;
+}
+
+
+/* User Booking Scene Styles - Add these to your existing CSS */
+
+/* User Booking Title */
+.user-booking-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 25px 0;
+    -fx-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.3), 8, 0.3, 0, 2);
+}
+
+.user-booking-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+    -fx-padding: 0 0 15px 0;
+    -fx-alignment: center;
+}
+
+/* User Search Form */
+.user-search-form {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-background-radius: 15px;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.4, 0, 4);
+    -fx-border-color: #1f2a38;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+    -fx-spacing: 15px;
+}
+
+/* User Form Labels */
+.user-form-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/* User Form Controls */
+.user-combo-box {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px 12px;
+    -fx-pref-width: 200px;
+}
+
+.user-combo-box:focused {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.user-combo-box .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.user-combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2f3640;
+}
+
+.user-combo-box .list-view {
+    -fx-background-color: #2f3640;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.user-combo-box .list-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.user-combo-box .list-cell:selected {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+/* User Date Pickers */
+.user-date-picker {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+    -fx-pref-width: 200px;
+}
+
+.user-date-picker:focused {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.user-date-picker .arrow-button {
+    -fx-background-color: #3d566e;
+    -fx-background-radius: 0 8px 8px 0;
+}
+
+.user-date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+/* User Search Button */
+.user-search-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 24px;
+    -fx-font-size: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 4);
+}
+
+.user-search-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.6), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* User Results Table */
+.user-results-table {
+    -fx-background-color: #2f3640;
+    -fx-text-background-color: white;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+    -fx-min-height: 300px;
+}
+
+.user-results-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.user-results-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.user-results-table .table-row-cell {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.user-results-table .table-row-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.user-results-table .table-row-cell:filled:selected {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.3), 4, 0.3, 0, 2);
+}
+
+/* User Table Cell Styling */
+.user-results-table .table-cell {
+    -fx-padding: 8px 10px;
+    -fx-border-color: transparent;
+}
+
+/* Room ID Column */
+.user-room-id-column .table-cell {
+    -fx-text-fill: #3498db;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Category Column */
+.user-category-column .table-cell {
+    -fx-text-fill: #9b59b6;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Price Column */
+.user-price-column .table-cell {
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+}
+
+/* User Book Button */
+.user-book-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-padding: 14px 30px;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 4);
+}
+
+.user-book-button:hover {
+    -fx-background-color: #27ae60;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.6), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.user-book-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-cursor: default;
+}
+
+/* User Empty Table Message */
+.user-empty-table {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 8px;
+    -fx-padding: 40px;
+    -fx-alignment: center;
+}
+
+.user-empty-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+.user-empty-icon {
+    -fx-font-size: 32px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* User Form Layout Enhancements */
+.user-form-row {
+    -fx-spacing: 15px;
+    -fx-alignment: center-left;
+}
+
+.user-form-section {
+    -fx-spacing: 8px;
+}
+
+/* User Search Results Section */
+.user-results-section {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+    -fx-spacing: 15px;
+}
+
+.user-results-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.user-results-count {
+    -fx-font-size: 13px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 12px;
+    -fx-padding: 4px 10px;
+}
+
+/* User Confirmation Dialog Enhancements */
+.user-confirmation-dialog .dialog-pane {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+}
+
+.user-confirmation-dialog .dialog-pane .header-panel {
+    -fx-background-color: #34495e;
+    -fx-padding: 15px;
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.user-confirmation-dialog .dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.user-confirmation-dialog .dialog-pane .content {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20px;
+    -fx-background-radius: 0 0 12px 12px;
+}
+
+.user-confirmation-dialog .dialog-pane .content .label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 13px;
+    -fx-line-spacing: 2px;
+}
+
+.user-confirmation-dialog .dialog-pane .button-bar .button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-font-size: 13px;
+}
+
+.user-confirmation-dialog .dialog-pane .button-bar .button:hover {
+    -fx-background-color: #27ae60;
+}
+
+.user-confirmation-dialog .dialog-pane .button-bar .button.cancel-button {
+    -fx-background-color: #95a5a6;
+}
+
+.user-confirmation-dialog .dialog-pane .button-bar .button.cancel-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* User Content Area */
+.user-content-area {
+    -fx-background-color: #1e272e;
+    -fx-padding: 25px;
+    -fx-spacing: 20px;
+}
+
+/* User Loading States */
+.user-loading-indicator {
+    -fx-progress-color: #2ecc71;
+    -fx-padding: 20px;
+}
+
+.user-loading-indicator .percentage {
+    -fx-fill: #2ecc71;
+}
+
+/* Custom Scrollbar for User Results Table */
+.user-results-table .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 12px;
+}
+
+.user-results-table .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 6px;
+}
+
+.user-results-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 6px;
+}
+
+.user-results-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #27ae60;
+}
+
+/* User Success/Error States */
+.user-success-message {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.user-error-message {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 6, 0.3, 0, 2);
+}
+
+/* Responsive Design for User Booking */
+@media (max-width: 1200px) {
+    .user-booking-title {
+        -fx-font-size: 24px;
+    }
+
+    .user-combo-box,
+    .user-date-picker {
+        -fx-pref-width: 150px;
+    }
+
+    .user-results-table {
+        -fx-font-size: 12px;
+    }
+
+    .user-search-form {
+        -fx-padding: 20px;
+    }
+}
+
+/* Smooth Transitions */
+.user-search-button,
+.user-book-button,
+.user-combo-box,
+.user-date-picker {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Focus Effects */
+.user-combo-box:focused,
+.user-date-picker:focused {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+/* Table Row Hover Animation */
+.user-results-table .table-row-cell {
+    -fx-transition: background-color 0.2s ease;
+}
+
+/* Action Button States */
+.user-search-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.user-book-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* User Reservations Scene Styles - Add these to your existing CSS */
+
+/* User Reservations Title */
+.user-reservations-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 25px 0;
+    -fx-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 8, 0.3, 0, 2);
+}
+
+.user-reservations-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-style: italic;
+    -fx-padding: 0 0 15px 0;
+    -fx-alignment: center;
+}
+
+/* User Stats Section */
+.user-stats-section {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-background-radius: 15px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.4, 0, 4);
+    -fx-border-color: #1f2a38;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+}
+
+/* User Stat Cards */
+.user-stat-card {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+    -fx-cursor: hand;
+}
+
+.user-stat-card:hover {
+    -fx-background-color: #3d566e;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 10, 0.4, 0, 4);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.user-stat-icon {
+    -fx-font-size: 28px;
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+}
+
+.user-stat-value {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.user-stat-title {
+    -fx-font-size: 13px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-weight: normal;
+    -fx-text-alignment: center;
+}
+
+/* Specific Stat Card Colors */
+.user-total-reservations-card .user-stat-icon {
+    -fx-text-fill: #3498db;
+}
+
+.user-upcoming-reservations-card .user-stat-icon {
+    -fx-text-fill: #2ecc71;
+}
+
+.user-past-reservations-card .user-stat-icon {
+    -fx-text-fill: #95a5a6;
+}
+
+/* User Table Section */
+.user-table-section {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+}
+
+.user-table-title {
+    -fx-font-size: 18px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.user-reservation-count {
+    -fx-font-size: 13px;
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+    -fx-background-color: #34495e;
+    -fx-background-radius: 12px;
+    -fx-padding: 4px 10px;
+}
+
+.user-refresh-button:hover {
+    -fx-background-color: #2ecc71;
+    -fx-border-color: #27ae60;
+}
+
+/* User Reservations Table */
+.user-reservations-table {
+    -fx-background-color: #2f3640;
+    -fx-text-background-color: white;
+    -fx-font-size: 13px;
+    -fx-table-cell-border-color: #34495e;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.3, 0, 3);
+    -fx-min-height: 300px;
+}
+
+.user-reservations-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.user-reservations-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-alignment: CENTER_LEFT;
+}
+
+.user-reservations-table .table-row-cell {
+    -fx-background-color: #2f3640;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.user-reservations-table .table-row-cell:hover {
+    -fx-background-color: #3d566e;
+}
+
+.user-reservations-table .table-row-cell:filled:selected {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.3), 4, 0.3, 0, 2);
+}
+
+/* User Table Column Styling */
+.user-reservations-table .table-cell {
+    -fx-padding: 8px 10px;
+    -fx-border-color: transparent;
+}
+
+/* Reservation ID Column */
+.user-reservation-id-column .table-cell {
+    -fx-text-fill: #9b59b6;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Room ID Column */
+.user-room-id-column .table-cell {
+    -fx-text-fill: #3498db;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Date Columns */
+.user-checkin-column .table-cell,
+.user-checkout-column .table-cell {
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+.user-duration-column .table-cell {
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+}
+
+/* Status Column */
+.user-status-column .table-cell {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* Payment Status Styling */
+.user-payment-paid {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+.user-payment-pending {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 3px 8px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+}
+
+/* User Controls Section */
+.user-controls-section {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.3, 0, 2);
+}
+
+/* User Control Buttons */
+.user-control-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.user-control-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.4, 0, 3);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.user-control-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: #bdc3c7;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-cursor: default;
+}
+
+/* Specific Control Button Styles */
+.user-view-button {
+    -fx-background-color: #16a085;
+    -fx-text-fill: white;
+}
+
+.user-view-button:hover {
+    -fx-background-color: #138d75;
+}
+
+.user-cancel-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.user-cancel-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.user-pay-button {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+}
+
+.user-pay-button:hover {
+    -fx-background-color: #e67e22;
+}
+
+/* Empty Table Message */
+.user-empty-message {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Custom Scrollbar for User Reservations Table */
+.user-reservations-table .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 12px;
+}
+
+.user-reservations-table .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 6px;
+}
+
+.user-reservations-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 6px;
+}
+
+.user-reservations-table .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #2980b9;
+}
+
+/* Reservation Details Dialog */
+.user-reservation-details-dialog .dialog-pane {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 12px;
+}
+
+.user-reservation-details-dialog .dialog-pane .header-panel {
+    -fx-background-color: #34495e;
+    -fx-padding: 15px;
+    -fx-background-radius: 12px 12px 0 0;
+}
+
+.user-reservation-details-dialog .dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+.user-reservation-details-dialog .dialog-pane .content {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 20px;
+    -fx-background-radius: 0 0 12px 12px;
+}
+
+.user-reservation-details-dialog .dialog-pane .content .label {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 13px;
+    -fx-line-spacing: 2px;
+}
+
+/* Loading States */
+.user-loading-indicator {
+    -fx-progress-color: #3498db;
+    -fx-padding: 20px;
+}
+
+.user-loading-indicator .percentage {
+    -fx-fill: #3498db;
+}
+
+/* Success/Error Message Styling */
+.user-success-message {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 6, 0.3, 0, 2);
+}
+
+.user-error-message {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 6, 0.3, 0, 2);
+}
+
+.user-warning-message {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 15px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(243,156,18,0.4), 6, 0.3, 0, 2);
+}
+
+/* Responsive Design for User Reservations */
+@media (max-width: 1200px) {
+    .user-reservations-title {
+        -fx-font-size: 24px;
+    }
+
+    .user-stat-card {
+        -fx-min-width: 120px;
+        -fx-max-width: 150px;
+        -fx-padding: 12px;
+    }
+
+    .user-stat-value {
+        -fx-font-size: 18px;
+    }
+
+    .user-stat-icon {
+        -fx-font-size: 24px;
+    }
+
+    .user-reservations-table {
+        -fx-font-size: 12px;
+    }
+
+    .user-control-button {
+        -fx-padding: 8px 16px;
+        -fx-font-size: 13px;
+    }
+}
+
+/* Smooth Transitions */
+.user-stat-card,
+.user-control-button,
+.user-refresh-button {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Table Row Animation */
+.user-reservations-table .table-row-cell {
+    -fx-transition: background-color 0.2s ease;
+}
+
+/* Focus Effects */
+.user-reservations-table:focused .table-row-cell:filled:selected {
+    -fx-background-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 6, 0.3, 0, 2);
+}
+
+/* Button Press Effects */
+.user-control-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Status Indicators */
+.reservation-status-upcoming {
+    -fx-text-fill: #2ecc71;
+    -fx-font-weight: bold;
+}
+
+.reservation-status-active {
+    -fx-text-fill: #f39c12;
+    -fx-font-weight: bold;
+}
+
+.reservation-status-completed {
+    -fx-text-fill: #95a5a6;
+    -fx-font-weight: bold;
+}
+
+/* Enhanced Table Cell Styling */
+.user-reservations-table .table-cell:hover {
+    -fx-background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Alternating Row Colors */
+.user-reservations-table .table-row-cell:odd {
+    -fx-background-color: #2f3640;
+}
+
+.user-reservations-table .table-row-cell:even {
+    -fx-background-color: #2a3138;
+}
+
+.user-reservations-table .table-row-cell:odd:hover,
+.user-reservations-table .table-row-cell:even:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Enhanced Empty State */
+.user-reservations-table .table-view:empty {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 8px;
+}
+
+/* Tooltip Enhancements */
+.tooltip.user-tooltip {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 6px;
+    -fx-font-size: 11px;
+    -fx-padding: 4px 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.3, 0, 3);
+}
+
+
+/* Login Scene Styles - Add these to your existing CSS */
+
+/* Login Main Container */
+.login-main-container {
+    -fx-background-color: linear-gradient(to bottom right, #1e272e, #2c3e50);
+}
+
+/* Login Left Panel */
+.login-left-panel {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-pref-width: 450;
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 2px 0 0;
+}
+
+/* Login Right Panel */
+.login-right-panel {
+    -fx-background-color: #1e272e;
+    -fx-pref-width: 450;
+}
+
+/* Logo Section */
+.login-logo-image {
+    -fx-fit-height: 80;
+    -fx-preserve-ratio: true;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 8, 0.3, 0, 3);
+}
+
+.login-logo-fallback {
+    -fx-font-size: 64px;
+    -fx-text-fill: #00a8ff;
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.4), 8, 0.3, 0, 3);
+}
+
+.login-app-title {
+    -fx-font-size: 28px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.login-app-subtitle {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Welcome Section */
+.login-welcome-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #00a8ff;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-alignment: center;
+}
+
+.login-welcome-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #95a5a6;
+    -fx-text-alignment: center;
+    -fx-line-spacing: 2px;
+}
+
+/* Features Section */
+.login-features-section {
+    -fx-background-color: rgba(52, 73, 94, 0.5);
+    -fx-background-radius: 12px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 6, 0.3, 0, 2);
+}
+
+.login-features-title {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.login-feature-item {
+    -fx-font-size: 13px;
+    -fx-text-fill: #bdc3c7;
+    -fx-padding: 2px 0;
+}
+
+/* Login Form Container */
+.login-form-container {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0.4, 0, 5);
+    -fx-border-color: #1f2a38;
+    -fx-border-radius: 15px;
+    -fx-border-width: 1px;
+}
+
+/* Form Header */
+.login-form-title {
+    -fx-font-size: 32px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+}
+
+.login-form-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #95a5a6;
+    -fx-text-alignment: center;
+    -fx-font-style: italic;
+}
+
+/* Form Fields */
+.login-field-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.login-text-field,
+.login-password-field {
+    -fx-background-color: #1e272e;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-radius: 8px;
+    -fx-border-width: 2px;
+    -fx-padding: 10px 15px;
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+.login-text-field:focused,
+.login-password-field:focused {
+    -fx-border-color: #00a8ff;
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.4), 8, 0.4, 0, 2);
+}
+
+/* Login Button */
+.login-primary-button {
+    -fx-background-color: linear-gradient(to bottom, #00a8ff, #0087d9);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.4), 8, 0.4, 0, 4);
+}
+
+.login-primary-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #0087d9, #006bb3);
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.6), 10, 0.5, 0, 5);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.login-primary-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.login-primary-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+}
+
+.login-success-button {
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 4);
+}
+
+/* Loading Indicator */
+.login-loading-indicator {
+    -fx-progress-color: #00a8ff;
+}
+
+.login-loading-indicator .percentage {
+    -fx-fill: #00a8ff;
+}
+
+/* Error Label */
+.login-error-label {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e74c3c;
+    -fx-font-weight: bold;
+    -fx-background-color: rgba(231, 76, 60, 0.1);
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 12px;
+    -fx-border-color: #e74c3c;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+    -fx-text-alignment: center;
+}
+
+/* Demo Section */
+.login-demo-section {
+    -fx-background-color: rgba(241, 196, 15, 0.1);
+    -fx-background-radius: 8px;
+    -fx-padding: 15px;
+    -fx-border-color: #f1c40f;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.login-demo-title {
+    -fx-font-size: 13px;
+    -fx-text-fill: #f1c40f;
+    -fx-font-weight: bold;
+}
+
+.login-demo-credential {
+    -fx-font-size: 12px;
+    -fx-text-fill: #f39c12;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-weight: bold;
+}
+
+/* Footer Section */
+.login-support-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #95a5a6;
+    -fx-text-alignment: center;
+}
+
+.login-contact-info {
+    -fx-font-size: 11px;
+    -fx-text-fill: #7f8c8d;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-text-alignment: center;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    .login-left-panel {
+        -fx-pref-width: 300;
+    }
+
+    .login-right-panel {
+        -fx-pref-width: 400;
+    }
+
+    .login-app-title {
+        -fx-font-size: 24px;
+    }
+
+    .login-form-title {
+        -fx-font-size: 28px;
+    }
+
+    .login-form-container {
+        -fx-padding: 30px;
+    }
+}
+
+/* Animations */
+.login-primary-button,
+.login-text-field,
+.login-password-field {
+    -fx-transition: all 0.2s ease;
+}
+
+/* Focus Ring Enhancement */
+.login-text-field:focused,
+.login-password-field:focused {
+    -fx-scale-x: 1.01;
+    -fx-scale-y: 1.01;
+}
+
+/* Hover Effects for Demo Credentials */
+.login-demo-credential:hover {
+    -fx-text-fill: #e67e22;
+    -fx-cursor: hand;
+}
+
+/* Enhanced Visual Polish */
+.login-features-section:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0.4, 0, 3);
+}
+
+.login-form-container:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 18, 0.5, 0, 6);
+}
+
+.login-left-panel-alt {
+    -fx-background-color: #2c3e50;
+    -fx-opacity: 0.9;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.3, 0, 3);
+}
+
+.login-form-container-alt {
+    -fx-background-color: #34495e;
+    -fx-opacity: 0.95;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0.4, 0, 5);
+}
+
+/* Or using semi-transparent hex colors */
+.login-left-panel-hex {
+    -fx-background-color: #2c3e50cc; /* cc = 80% opacity in hex */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.3, 0, 3);
+}
+
+.login-form-container-hex {
+    -fx-background-color: #34495ef2; /* f2 = 95% opacity in hex */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 15, 0.4, 0, 5);
+}
+
+/* Field Validation States */
+.login-text-field.error,
+.login-password-field.error {
+    -fx-border-color: #e74c3c;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 8, 0.4, 0, 2);
+}
+
+.login-text-field.success,
+.login-password-field.success {
+    -fx-border-color: #2ecc71;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.4), 8, 0.4, 0, 2);
+}
+
+/* Enhanced Placeholder Text */
+.login-text-field,
+.login-password-field {
+    -fx-prompt-text-fill: #7f8c8d;
+}
+
+.login-text-field:focused,
+.login-password-field:focused {
+    -fx-prompt-text-fill: #95a5a6;
+}
+
+/* Button States */
+.login-primary-button:default {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+    -fx-effect: dropshadow(gaussian, rgba(52,152,219,0.4), 8, 0.4, 0, 4);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0% { -fx-opacity: 1.0; }
+    50% { -fx-opacity: 0.5; }
+    100% { -fx-opacity: 1.0; }
+}
+
+.login-loading-indicator {
+    -fx-animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Enhanced Shadows */
+.login-app-title {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 6, 0.4, 0, 3);
+}
+
+.login-welcome-title {
+    -fx-effect: dropshadow(gaussian, rgba(0,168,255,0.3), 4, 0.3, 0, 2);
+}
+
+/* Form Field Icons (if you want to add them later) */
+.login-field-with-icon {
+    -fx-background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IiM3ZjhjOGQiPjwvc3ZnPg==");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: 10px center;
+    -fx-padding: 10px 15px 10px 35px;
+}
+
+/* Accessibility Enhancements */
+.login-text-field:focused,
+.login-password-field:focused,
+.login-primary-button:focused {
+    -fx-focus-color: #00a8ff;
+    -fx-faint-focus-color: rgba(0,168,255,0.2);
+}
+
+/* Dark Mode Variants (for future use) */
+.dark-mode .login-main-container {
+    -fx-background-color: linear-gradient(to bottom right, #0f1419, #1e272e);
+}
+
+.dark-mode .login-left-panel {
+    -fx-background-color: linear-gradient(to bottom, #1e272e, #2c3e50);
+}
+
+.dark-mode .login-right-panel {
+    -fx-background-color: #0f1419;
+}
+
+/* High Contrast Mode */
+.high-contrast .login-text-field,
+.high-contrast .login-password-field {
+    -fx-border-width: 3px;
+    -fx-border-color: #ffffff;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #000000;
+}
+
+.high-contrast .login-primary-button {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+}
+
+/* Print Styles (for documentation) */
+@media print {
+    .login-main-container {
+        -fx-background-color: white;
+    }
+
+    .login-form-container {
+        -fx-background-color: white;
+        -fx-border-color: black;
+        -fx-border-width: 1px;
+    }
+
+    .login-primary-button {
+        -fx-background-color: white;
+        -fx-text-fill: black;
+        -fx-border-color: black;
+        -fx-border-width: 1px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (pointer: coarse) {
+    .login-text-field,
+    .login-password-field {
+        -fx-pref-height: 50px;
+        -fx-font-size: 16px;
+    }
+
+    .login-primary-button {
+        -fx-pref-height: 55px;
+        -fx-font-size: 18px;
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    .login-primary-button,
+    .login-text-field,
+    .login-password-field {
+        -fx-transition: none;
+    }
+}
+
+
+
+/* Additional ScrollPane Styles for User Scenes - Add to your CSS */
+
+/* Booking ScrollPane */
+.booking-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.booking-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.booking-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.booking-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #27ae60;
+}
+
+.booking-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #1e8449;
+}
+
+.booking-scroll .scroll-bar:vertical .increment-button,
+.booking-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.booking-scroll .scroll-bar:vertical .increment-button:hover,
+.booking-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Reservations ScrollPane */
+.reservations-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.reservations-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.reservations-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.reservations-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #3498db;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #2980b9;
+}
+
+.reservations-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #1f4e79;
+}
+
+.reservations-scroll .scroll-bar:vertical .increment-button,
+.reservations-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.reservations-scroll .scroll-bar:vertical .increment-button:hover,
+.reservations-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Enhanced Table Styling within ScrollPanes */
+.booking-scroll .user-results-table,
+.reservations-scroll .user-reservations-table {
+    -fx-background-color: #2f3640;
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+
+/* Fix for table headers in scroll panes */
+.booking-scroll .user-results-table .column-header-background,
+.reservations-scroll .user-reservations-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #2ecc71, #27ae60);
+}
+
+.reservations-scroll .user-reservations-table .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #3498db, #2980b9);
+}
+
+/* Scene-Level ScrollPane Styles - Add to your CSS */
+
+/* User Scene ScrollPane */
+.user-scene-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+.user-scene-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.user-scene-scroll .scroll-bar:vertical {
+    -fx-background-color: #2c3e50;
+    -fx-pref-width: 14px;
+}
+
+.user-scene-scroll .scroll-bar:vertical .track {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.user-scene-scroll .scroll-bar:vertical .thumb {
+    -fx-background-color: #00a8ff;
+    -fx-background-radius: 7px;
+}
+
+.user-scene-scroll .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #0087d9;
+}
+
+.user-scene-scroll .scroll-bar:vertical .thumb:pressed {
+    -fx-background-color: #006bb3;
+}
+
+.user-scene-scroll .scroll-bar:vertical .increment-button,
+.user-scene-scroll .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 7px;
+}
+
+.user-scene-scroll .scroll-bar:vertical .increment-button:hover,
+.user-scene-scroll .scroll-bar:vertical .decrement-button:hover {
+    -fx-background-color: #3d566e;
+}
+
+/* Ensure tables have their own scroll when needed */
+.user-results-table,
+.user-reservations-table {
+    -fx-table-cell-border-color: #34495e;
+}
+
+/* Fix for content that might be too wide */
+.user-content-area {
+    -fx-min-width: 0;
+    -fx-pref-width: 100%;
+}
+
+/* Enhanced Booking Dialog Styles - Add to your CSS */
+
+/* Dialog Close Button */
+.dialog-close-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 15px;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.4), 4, 0.3, 0, 2);
+}
+
+.dialog-close-button:hover {
+    -fx-background-color: #c0392b;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.6), 6, 0.4, 0, 3);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+/* Success Button State */
+.success-button {
+    -fx-background-color: #2ecc71 !important;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.5), 8, 0.4, 0, 4);
+}
+
+/* Enhanced Dialog Field States */
+.dialog-field.error {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(231,76,60,0.3), 6, 0.3, 0, 2);
+}
+
+.dialog-field.success {
+    -fx-border-color: #2ecc71;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.3), 6, 0.3, 0, 2);
+}
+
+/* Form Label Enhancements */
+.form-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.form-value {
+    -fx-font-size: 13px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-family: "Consolas", "Monaco", monospace;
+    -fx-font-weight: bold;
+}
+
+/* Field Description */
+.field-description {
+    -fx-font-size: 11px;
+    -fx-text-fill: #95a5a6;
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
+}
+
+/* Enhanced Field Groups */
+.field-group {
+    -fx-background-color: #34495e;
+    -fx-background-radius: 10px;
+    -fx-padding: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0.3, 0, 2);
+    -fx-border-color: #4a6741;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+.field-group:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0.4, 0, 3);
+}
+
+/* Field Titles */
+.field-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+/* Dialog Buttons Enhanced */
+.dialog-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 12px 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4, 0.3, 0, 2);
+    -fx-transition: all 0.2s ease;
+}
+
+.dialog-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.4, 0, 3);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.dialog-button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.dialog-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: #bdc3c7;
+    -fx-effect: none;
+    -fx-scale-x: 1.0;
+    -fx-scale-y: 1.0;
+    -fx-cursor: default;
+}
+
+/* Save Button Specific */
+.save-button {
+    -fx-background-color: #2ecc71;
+    -fx-text-fill: white;
+}
+
+.save-button:hover {
+    -fx-background-color: #27ae60;
+}
+
+/* Cancel Button Specific */
+.cancel-button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* Dialog Container Enhanced */
+.dialog-container {
+    -fx-background-color: linear-gradient(to bottom, #2c3e50, #34495e);
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 15, 0.4, 0, 5);
+}
+
+/* Dialog Header Enhanced */
+.dialog-header {
+    -fx-background-color: linear-gradient(to bottom, #34495e, #2c3e50);
+    -fx-background-radius: 15px 15px 0 0;
+    -fx-border-color: #1f2a38;
+    -fx-border-width: 0 0 2px 0;
+}
+
+/* Dialog Form Enhanced */
+.dialog-form {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 0 0 15px 15px;
+}
+
+/* Dialog Title Enhanced */
+.dialog-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ecf0f1;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.3, 0, 1);
+}
+
+/* Dialog Subtitle Enhanced */
+.dialog-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #bdc3c7;
+    -fx-font-style: italic;
+    -fx-text-alignment: center;
+}
+
+/* Enhanced Grid Styling */
+.dialog-form .grid-pane {
+    -fx-hgap: 15px;
+    -fx-vgap: 8px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .dialog-container {
+        -fx-pref-width: 90%;
+        -fx-max-width: 450px;
+    }
+
+    .dialog-title {
+        -fx-font-size: 18px;
+    }
+
+    .dialog-button {
+        -fx-padding: 10px 16px;
+        -fx-font-size: 13px;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    -fx-opacity: 0;
+}
+
+.scale-in {
+    -fx-scale-x: 0.8;
+    -fx-scale-y: 0.8;
+}
+
+/* Loading State */
+.dialog-button.loading {
+    -fx-background-color: #f39c12;
+    -fx-text-fill: white;
+}
+
+.dialog-button.loading:hover {
+    -fx-background-color: #e67e22;
+}

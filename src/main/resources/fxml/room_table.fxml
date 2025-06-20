@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.ui.controller.RoomTableViewController">
+    <TableView fx:id="tableView" layoutX="20" layoutY="20" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="idColumn" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="roomNumberColumn" text="Room Number" prefWidth="100"/>
+            <TableColumn fx:id="categoryColumn" text="Category" prefWidth="100"/>
+            <TableColumn fx:id="availableColumn" text="Available" prefWidth="100"/>
+            <TableColumn fx:id="priceColumn" text="Price/Night" prefWidth="120"/>
+        </columns>
+    </TableView>
+</AnchorPane>
