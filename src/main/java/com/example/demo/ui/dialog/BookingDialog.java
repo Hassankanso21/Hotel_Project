@@ -37,17 +37,23 @@ public class BookingDialog {
         // Create main container
         VBox mainContainer = createMainContainer();
 
-        // Create header
+        // Create header (fixed at top)
         VBox header = createHeader(dialog);
 
-        // Create form section
-        VBox formSection = createFormSection(roomId, checkIn, checkOut, jwtToken, dialog);
+        // Create scrollable content
+        ScrollPane scrollPane = createScrollableContent(roomId, checkIn, checkOut, jwtToken, dialog);
 
-        mainContainer.getChildren().addAll(header, formSection);
+        mainContainer.getChildren().addAll(header, scrollPane);
 
-        Scene scene = new Scene(mainContainer, 500, 450);
+        // Adjust scene size to be more flexible
+        Scene scene = new Scene(mainContainer, 500, Math.min(600, 450)); // Allow up to 600px height
         scene.getStylesheets().add(BookingDialog.class.getResource("/css/user_booking_style.css").toExternalForm());
         dialog.setScene(scene);
+
+        // Set minimum and maximum sizes
+        dialog.setMinWidth(500);
+        dialog.setMinHeight(400);
+        dialog.setMaxHeight(700); // Limit maximum height
 
         // Center on screen
         dialog.centerOnScreen();
@@ -96,10 +102,40 @@ public class BookingDialog {
         return header;
     }
 
+    private static ScrollPane createScrollableContent(Long roomId, LocalDate checkIn, LocalDate checkOut, String jwtToken, Stage dialog) {
+        // Create the scrollable content container
+        VBox scrollableContent = new VBox(20);
+        scrollableContent.setPadding(new Insets(20));
+
+        // Create form section content
+        VBox formSection = createFormSection(roomId, checkIn, checkOut, jwtToken, dialog);
+        scrollableContent.getChildren().add(formSection);
+
+        // Create ScrollPane
+        ScrollPane scrollPane = new ScrollPane(scrollableContent);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER); // Hide horizontal scrollbar
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED); // Show vertical scrollbar when needed
+
+        // Set preferred viewport height to ensure buttons are always visible
+        scrollPane.setPrefViewportHeight(350); // Adjust this value as needed
+        scrollPane.setMaxHeight(450); // Maximum scroll area height
+
+        // Style the scroll pane
+        scrollPane.getStyleClass().add("dialog-scroll-pane");
+
+        // Make scrolling smoother
+        scrollPane.setVvalue(0); // Start at top
+
+        // VBox to grow and fill space
+        VBox.setVgrow(scrollPane, Priority.ALWAYS);
+
+        return scrollPane;
+    }
+
     private static VBox createFormSection(Long roomId, LocalDate checkIn, LocalDate checkOut, String jwtToken, Stage dialog) {
         VBox formSection = new VBox(20);
         formSection.getStyleClass().add("dialog-form");
-        formSection.setPadding(new Insets(20));
 
         // Room Information Card
         VBox roomInfoCard = createRoomInfoCard(roomId, checkIn, checkOut, jwtToken);
@@ -110,7 +146,7 @@ public class BookingDialog {
         // Booking Summary Card
         VBox summaryCard = createBookingSummaryCard(checkIn, checkOut);
 
-        // Action Buttons
+        // Action Buttons (always visible at bottom)
         HBox buttonSection = createButtonSection(roomId, checkIn, checkOut, jwtToken, dialog, customerCard);
 
         formSection.getChildren().addAll(roomInfoCard, customerCard, summaryCard, buttonSection);
@@ -245,7 +281,7 @@ public class BookingDialog {
     private static HBox createButtonSection(Long roomId, LocalDate checkIn, LocalDate checkOut, String jwtToken, Stage dialog, VBox customerCard) {
         HBox buttonSection = new HBox(15);
         buttonSection.setAlignment(Pos.CENTER);
-        buttonSection.setPadding(new Insets(10, 0, 0, 0));
+        buttonSection.setPadding(new Insets(20, 0, 10, 0)); // Increased top padding for better spacing
 
         Button cancelBtn = new Button("❌ Cancel");
         cancelBtn.getStyleClass().addAll("dialog-button", "cancel-button");

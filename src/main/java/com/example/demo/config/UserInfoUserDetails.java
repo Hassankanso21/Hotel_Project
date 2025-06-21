@@ -1,6 +1,5 @@
 package com.example.demo.config;
 
-
 import com.example.demo.entity.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -11,22 +10,18 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
-//interface to represent user details retrieved from DB
+// Interface to represent user details retrieved from DB
 public class UserInfoUserDetails implements UserDetails {
-
 
     private String name;
     private String password;
     private List<GrantedAuthority> authorities;
 
-
-
     public UserInfoUserDetails(UserInfo userInfo) {
-        name=userInfo.getName();
-        password=userInfo.getPassword();
-        authorities= Arrays.stream(userInfo.getRoles().split(","))
-                .map(SimpleGrantedAuthority::new)
+        name = userInfo.getName();
+        password = userInfo.getPassword();
+        authorities = Arrays.stream(userInfo.getRoles().split(","))
+                .map(role -> new SimpleGrantedAuthority(role.trim().toUpperCase()))
                 .collect(Collectors.toList());
     }
 

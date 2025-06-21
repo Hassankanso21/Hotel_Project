@@ -18,6 +18,7 @@ import javafx.scene.layout.*;
 import javafx.util.Callback;
 import javafx.util.Duration;
 import org.springframework.http.*;
+import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
@@ -557,14 +558,17 @@ public class RoomManagementScene {
         }
     }
 
+    // Inside createRoom()
     private void createRoom() {
         try {
-            RoomCreationDialog.show(null, this::loadRoomsAsync);
+            RoomCreationDialog.show(null, this::loadRoomsAsync, jwtToken); // ✅ Token passed
         } catch (Exception e) {
-            // Fallback: Create a simple room creation dialog if RoomCreationDialog doesn't exist
             showSimpleRoomCreationDialog();
         }
     }
+
+
+
 
     private void showSimpleRoomCreationDialog() {
         Dialog<ButtonType> dialog = new Dialog<>();
@@ -640,15 +644,13 @@ public class RoomManagementScene {
             }
         });
     }
-
     private void createRoomViaAPI(String roomNumber, String category, double pricePerNight, boolean isAvailable) {
         setLoading(true);
         updateStatusLabel("Creating room...");
 
-        Task<Void> createTask = new Task<Void>() {
+        Task<Void> createTask = new Task<>() {
             @Override
-            protected Void call() throws Exception {
-                // Create room object as JSON string
+            protected Void call() {
                 String roomJson = String.format(
                         "{\"roomNumber\":\"%s\",\"category\":\"%s\",\"pricePerNight\":%.2f,\"available\":%b}",
                         roomNumber, category, pricePerNight, isAvailable
@@ -659,12 +661,23 @@ public class RoomManagementScene {
                 headers.setContentType(MediaType.APPLICATION_JSON);
                 HttpEntity<String> entity = new HttpEntity<>(roomJson, headers);
 
-                restTemplate.exchange(
-                        "http://localhost:8080/api/rooms",
-                        HttpMethod.POST,
-                        entity,
-                        HotelRoom.class
-                );
+                try {
+                    restTemplate.exchange(
+                            "http://localhost:8080/api/rooms",
+                            HttpMethod.POST,
+                            entity,
+                            HotelRoom.class
+                    );
+                } catch (HttpClientErrorException.Forbidden ex) {
+                    throw new RuntimeException("403 Forbidden: You are authenticated but not authorized to create a room. Ensure your account has the ROLE_ADMIN authority.");
+                } catch (HttpClientErrorException.Unauthorized ex) {
+                    throw new RuntimeException("401 Unauthorized: Your request is missing a valid token. Please login again.");
+                } catch (HttpClientErrorException ex) {
+                    throw new RuntimeException("HTTP " + ex.getStatusCode() + ": " + ex.getResponseBodyAsString());
+                } catch (Exception e) {
+                    throw new RuntimeException("Unexpected error: " + e.getMessage(), e);
+                }
+
                 return null;
             }
 
@@ -692,16 +705,14 @@ public class RoomManagementScene {
         createThread.setDaemon(true);
         createThread.start();
     }
-
+    // Inside editRoom(HotelRoom room)
     private void editRoom(HotelRoom room) {
         try {
-            RoomCreationDialog.show(room, this::loadRoomsAsync);
+            RoomCreationDialog.show(room, this::loadRoomsAsync, jwtToken); // ✅ Token passed
         } catch (Exception e) {
-            // Fallback: Create a simple room edit dialog if RoomCreationDialog doesn't exist
             showSimpleRoomEditDialog(room);
         }
     }
-
     private void showSimpleRoomEditDialog(HotelRoom room) {
         Dialog<ButtonType> dialog = new Dialog<>();
         dialog.setTitle("Edit Room");
